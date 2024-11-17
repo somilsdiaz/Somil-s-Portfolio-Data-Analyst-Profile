@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 
@@ -287,6 +286,7 @@ function closeLightbox() {
                     </div>
                 </section>
             </main>
+            <Footer />
 
         </div>
     );
