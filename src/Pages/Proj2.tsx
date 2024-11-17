@@ -83,6 +83,34 @@ export default function ProjectDetails() {
                         >
                             Loan Defaulter Prediction
                         </motion.h1>
+                        <motion.div
+                            className="mt-12 mb-12 flex justify-center space-x-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 1.2 }}
+                        >
+                            <a 
+                                href="https://lookerstudio.google.com/u/0/reporting/3a5fadf5-0bf8-4370-a2a1-0b9add124378/page/e9URE" 
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition-colors"
+                                target="_blank"
+                            >
+                                <ExternalLink className="mr-2" /> Dashboard (Look Studio)
+                            </a>
+                            <a 
+                                href="https://darwincharris.github.io/ProjectSelection-DM202430/index.html" 
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition-colors"
+                                target="_blank"
+                            >
+                                <ExternalLink className="mr-2" /> Project Page
+                            </a>
+                            <a 
+                                href="https://www.kaggle.com/datasets/gauravduttakiit/loan-defaulter?select=columns_description.csv" 
+                                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition-colors"
+                                target="_blank"
+                            >
+                                <ExternalLink className="mr-2" />Loan Defaulter Dataset
+                            </a>
+                        </motion.div>
 
                         <motion.div
                             className="bg-white/10 rounded-xl p-8 backdrop-blur-sm mb-12"
@@ -175,11 +203,6 @@ export default function ProjectDetails() {
                             </div>
                         )}
 
-
-
-
-
-
                         <motion.div
                             className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8"
                             initial={{ opacity: 0, y: 20 }}
@@ -210,6 +233,52 @@ export default function ProjectDetails() {
                         </motion.div>
 
                         <motion.div
+                            className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 1.6 }}
+                        >
+                            {/* Data Quality Insights Section */}
+                            <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg">
+                                <h2 className="text-3xl font-bold mb-6 text-center">Data Quality Insights</h2>
+                                <h3 className="text-xl font-semibold mb-4">Data Cleaning</h3>
+                                <ul className="list-disc list-inside space-y-4 text-gray-300">
+                                    <li><strong>Missing Values:</strong> Removed rows with minimal missing data in columns like `AMT_ANNUITY` and `AMT_GOODS_PRICE` to maintain data integrity.</li>
+                                    <li><strong>Outliers:</strong> Extreme values were analyzed, with some being valid (e.g., unemployed/self-employed customers).</li>
+                                </ul>
+                                <h3 className="text-xl font-semibold mb-4">Exogenous Data</h3>
+                                <p className="text-gray-300">External economic factors (interest rates, unemployment, inflation) were included to improve predictions related to repayment behavior.</p>
+                            </div>
+
+                            {/* Data Visualization Section */}
+                            <div className="bg-gradient-to-r from-blue-900 via-gray-900 to-blue-900 p-6 rounded-xl shadow-lg">
+                                <h2 className="text-3xl font-bold mb-6 text-center">Data Visualization</h2>
+                                <ul className="list-disc list-inside space-y-4 text-gray-300">
+                                    <li><strong>Class Imbalance:</strong> 91.9% of clients had no payment difficulties, with only 8.1% facing defaults.</li>
+                                    <li><strong>Gender Distribution:</strong> Of 200,000 clients, 68,500 are men and 131,500 are women, with a higher number of defaults among women.</li>
+                                    <li><strong>Age Distribution:</strong> Age groups 31–50 show the highest risk for defaults, suggesting economic responsibilities increase default risk.</li>
+                                    <li><strong>Ownership of Assets:</strong> No significant correlation found between asset ownership (vehicle/house) and delinquency risk.</li>
+                                    <li><strong>Educational Level:</strong> Clients with secondary education had the highest concentration of payment difficulties.</li>
+                                </ul>
+                            </div>
+
+                            {/* Machine Learning Model Section */}
+                            <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg">
+                                <h2 className="text-3xl font-bold mb-6 text-center">Machine Learning Model</h2>
+                                <h3 className="text-xl font-semibold mb-4">Model Selection and Training</h3>
+                                <ul className="list-disc list-inside space-y-4 text-gray-300">
+                                    <li>Logistic Regression model used for binary classification.</li>
+                                    <li>Model trained on the processed dataset with cross-validation.</li>
+                                    <li>SMOTE applied to address class imbalance and improve default detection.</li>
+                                </ul>
+                                <h3 className="text-xl font-semibold mb-4">Model Evaluation</h3>
+                                <p className="text-gray-300">Performance evaluated with accuracy, precision, recall, and F1-score metrics. SMOTE improved the prediction of defaults.</p>
+                                <h3 className="text-xl font-semibold mb-4">Confusion Matrix</h3>
+                                <p className="text-gray-300">Class balancing through SMOTE improved the model's prediction of defaults, as seen in the confusion matrix comparison.</p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
                             className="mt-12 flex justify-center space-x-6"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -221,12 +290,6 @@ export default function ProjectDetails() {
                                 className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition-colors backdrop-blur-sm"
                             >
                                 <Github className="mr-2" /> View on GitHub
-                            </a>
-                            <a 
-                                href="#" 
-                                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition-colors"
-                            >
-                                <ExternalLink className="mr-2" /> Live Demo
                             </a>
                         </motion.div>
                     </div>
