@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ChevronRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 
 export default function ProjectDetails() {
     const [lightbox, setLightbox] = useState({ isOpen: false, src: '', alt: '' });
@@ -14,8 +17,11 @@ function closeLightbox() {
     setLightbox({ isOpen: false, src: '', alt: '' });
 }
     return (
+        
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
+            
             <header className="w-full z-10 backdrop-filter backdrop-blur-sm">
+
                 <div className="container mx-auto px-4 py-4">
                     <nav className="flex justify-between items-center">
                         <Link
@@ -30,7 +36,7 @@ function closeLightbox() {
             </header>
 
             <main>
-                <section className="py-20  relative overflow-hidden">
+                <section className="py-12 relative overflow-hidden">
                     <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:40px_40px]" />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" />
                     <div className="container mx-auto px-4 relative z-10">
@@ -70,7 +76,35 @@ function closeLightbox() {
                                 <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
                                     GEXF
                                 </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    os
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    getopt
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    sys
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    shutil
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    datetime
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    time
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    BZ2File
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    DiGraph
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    Python multiprocessing
+                                </span>
                             </div>
+
                         </motion.div>
 
                         <motion.div
@@ -243,16 +277,11 @@ function closeLightbox() {
                             transition={{ duration: 0.8, delay: 1.2 }}
                         >
                             <a
-                                href="#"
+                                href="https://github.com/somilsdiaz/twitter-data-network-analysis/tree/main"
+                                target="_blank"
                                 className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition-colors backdrop-blur-sm"
                             >
                                 <Github className="mr-2" /> View on GitHub
-                            </a>
-                            <a
-                                href="#"
-                                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition-colors"
-                            >
-                                <ExternalLink className="mr-2" /> Live Demo
                             </a>
                         </motion.div>
                     </div>
