@@ -5,7 +5,7 @@ import { TrendingUp, PieChart, LineChart, BarChart2 } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      id: 2,
+      id: 1,
       title: 'Advanced Twitter Data Analysis',
       description: 'Perform large-scale Twitter data processing, content filtering, and interaction network modeling.',
       technologies: ['Python', 'NetworkX', 'MPI (mpi4py)', 'JSON/BZ2', 'GEXF', 'os', 'getopt', 'sys', 'shutil', 'datetime', 'time', 'BZ2File', 'DiGraph', 'Python multiprocessing'],
@@ -46,16 +46,30 @@ export default function Projects() {
       buttonColor: "bg-green-500 text-white hover:bg-green-600 border-2 border-transparent hover:border-green-300 shadow-lg hover:shadow-xl rounded-lg transform hover:scale-105 transition-all",
       link: '/loan-defaulter-prediction',
     },
-    
-    
+
     {
       id: 3,
-      title: 'Sales Forecast',
-      description: 'Forecast future sales using historical data.',
-      technologies: ['TensorFlow', 'SQL', 'AWS'],
-      icon: ['project1/x1.png', 'project1/x2.png'],
-      color: 'from-cyan-500 to-blue-600',
-      link: '/project3'
+      title: 'Simulation of Distributions and Statistical Sampling for Probabilistic Data Analysis and Visualization',
+      description: "This project simulates and visualizes probabilistic data using exponential, uniform, and normal distributions. It includes statistical analysis of mean, kurtosis, skewness, and variance, alongside graphical visualization and data exportation to CSV for further analysis, with applications in fields like statistics, finance, and engineering.",
+      technologies: [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Seaborn",
+        "Matplotlib",
+        "SciPy",
+        "Data Analysis",
+        "Statistical Sampling",
+        "CSV Export",
+        "Probability Distributions",
+        "Data Visualization"
+      ],
+      icon: ["project3/p3.png", "project3/i3.png"],
+      color: 'from-indigo-900 via-indigo-800 to-indigo-700',
+      titleColor: 'text-blue-100',
+      descriptionColor: 'text-blue-200',
+      buttonColor: "bg-blue-500 text-white hover:bg-blue-600 border-2 border-transparent hover:border-blue-300 shadow-lg hover:shadow-xl rounded-lg transform hover:scale-105 transition-all",
+      link: '/simulation-of-distributions',
     },
     {
       id: 4,

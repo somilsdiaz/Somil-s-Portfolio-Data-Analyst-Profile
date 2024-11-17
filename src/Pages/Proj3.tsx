@@ -63,28 +63,35 @@ export default function ProjectDetails() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                         >
-                            <p className="text-xl mb-6">
-                                This project involves generating, analyzing, and visualizing probabilistic data through 
-                                the simulation of exponential, uniform, and normal distributions. It provides insights 
-                                into the properties of these distributions via statistical calculations and graphical 
-                                representations.
-                            </p>
+                        <p className="text-xl mb-6">
+                            <strong>This project</strong> generates, analyzes, and visualizes probabilistic data by simulating <strong>exponential, uniform, and normal distributions</strong> using advanced statistical techniques and Python programming. By exploring random samples of sizes 10, 20, and 50, it reveals how increasing sample size and combining more samples lead to distributions that more closely align with theoretical models. <br /> <br />
+                            This demonstrates the <strong>law of large numbers</strong>, where larger samples better represent underlying distributions. The project emphasizes the role of <strong>sample size in statistical analysis</strong> and offers valuable insights for decision-making, risk assessment, and predictive modeling across industries like <strong>finance, engineering, healthcare, and research</strong>. <br /> <br />
+                            It aids in <strong>risk management, loan default prediction, modeling component lifespans, forecasting patient outcomes,</strong> and improving experiment design. Ultimately, this simulation tool enhances the accuracy of predictions, optimizes processes, and reduces uncertainty, making it essential for <strong>data-driven decision-making</strong>.
+                        </p>
+
                             <div className="flex flex-wrap gap-2">
-                                {[
-                                    'pandas',
-                                    'numpy',
-                                    'seaborn',
-                                    'matplotlib',
-                                    'scipy'
-                                ].map((tech, index) => (
-                                    <span
-                                        key={index}
-                                        className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
+                            {[
+                                'pandas',
+                                'numpy',
+                                'seaborn',
+                                'matplotlib',
+                                'scipy',
+                                'Python',
+                                'Data Analysis',
+                                'Statistical Sampling',
+                                'CSV Export',
+                                'Probability Distributions',
+                                'Data Visualization'
+                            ].map((tech, index) => (
+                                <span
+                                    key={index}
+                                    className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+
                         </motion.div>
 
                         <section>
@@ -100,16 +107,16 @@ export default function ProjectDetails() {
                                         <h2 className="text-3xl font-bold mb-6">Project Objectives</h2>
                                         <ul className="list-disc list-inside space-y-4 text-gray-300">
                                             <li>
-                                                <strong>Probabilistic Sampling Simulation</strong>: Generate random samples from exponential and normal distributions to model real-world processes.
+                                                <strong>Probabilistic Sampling Simulation</strong>: Generate random samples from exponential, uniform, and normal distributions to model real-world processes and observe how sample size affects alignment with theoretical models.
                                             </li>
                                             <li>
-                                                <strong>Statistical Analysis</strong>: Calculate mean, kurtosis, skewness, and variance for insights into sample behavior.
+                                                <strong>Statistical Analysis</strong>: Calculate mean, kurtosis, skewness, and variance to gain insights into sample behavior and evaluate the effect of sample size on distribution approximation.
                                             </li>
                                             <li>
-                                                <strong>Graphical Visualization</strong>: Create histograms and overlay theoretical density curves to visualize data distribution.
+                                                <strong>Graphical Visualization</strong>: Create histograms with theoretical density curves to visualize data distribution and how larger samples resemble real-world distributions.
                                             </li>
                                             <li>
-                                                <strong>Results Exportation</strong>: Save data and statistics in CSV files for further analysis.
+                                                <strong>Results Exportation</strong>: Save generated data and statistics in CSV files for further analysis and integration into broader studies or predictive models.
                                             </li>
                                         </ul>
                                     </motion.div>
@@ -123,9 +130,7 @@ export default function ProjectDetails() {
                                     >
                                         <h2 className="text-3xl font-bold mb-6">Sample Generation and Statistical Calculations</h2>
                                         <p className="text-gray-300">
-                                            Exponential samples of sizes <code>n = 10, 20, 50</code> are generated using the 
-                                            <code>expon.rvs</code> function from <code>scipy.stats</code>, with the scale parameter 
-                                            adjusted to represent event occurrence rates. Key statistics include:
+                                        Random samples of sizes n = 10, 20, 50 are generated from exponential, uniform, and normal distributions. The expon.rvs, uniform.rvs, and norm.rvs functions from scipy.stats are used, with the scale parameter for the exponential distribution adjusted to represent event occurrence rates, and the other distributions defined based on their respective parameters. The key statistics calculated for each sample include:
                                         </p>
                                         <ul className="list-disc list-inside mt-4 space-y-4 text-gray-300">
                                             <li><strong>Mean:</strong> Average value of each sample.</li>

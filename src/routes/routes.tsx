@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <Proj2 />,
     },
     {
-        path: "/project3",
+        path: "/simulation-of-distributions",
         element: <Proj3 />,
     },
     {
