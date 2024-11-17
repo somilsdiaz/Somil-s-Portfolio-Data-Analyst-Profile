@@ -20,7 +20,7 @@ export default function Projects() {
       technologies: ['Python', 'Keras', 'Scikit-learn'],
       icon: PieChart,
       color: 'from-pink-500 to-rose-600',
-      link: '/customer-segmentation'
+      link: '/project2'
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ export default function Projects() {
       technologies: ['TensorFlow', 'SQL', 'AWS'],
       icon: LineChart,
       color: 'from-cyan-500 to-blue-600',
-      link: '/sales-forecast'
+      link: '/project3'
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ export default function Projects() {
       technologies: ['PowerBI', 'PostgreSQL', 'Tableau'],
       icon: BarChart2,
       color: 'from-emerald-500 to-green-600',
-      link: '/product-performance'
+      link: '/project4'
     },
   ];
 
