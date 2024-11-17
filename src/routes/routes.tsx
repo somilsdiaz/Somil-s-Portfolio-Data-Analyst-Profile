@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         element: <MainPage />,
     },
     {
-        path: "/project1",
+        path: "/twitter-data-network",
         element: <Proj1 />,
     },
     {

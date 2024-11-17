@@ -11,7 +11,7 @@ export default function Projects() {
       technologies: ['React', 'D3.js', 'Node.js'],
       icon: TrendingUp,
       color: 'from-indigo-500 to-purple-600',
-      link: '/project1'
+      link: '/twitter-data-network'
     },
     {
       id: 2,
