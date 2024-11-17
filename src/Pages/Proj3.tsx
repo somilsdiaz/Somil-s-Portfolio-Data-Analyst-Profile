@@ -5,15 +5,27 @@ import { ArrowLeft, Github } from 'lucide-react';
 import Footer from '../components/Footer';
 
 export default function ProjectDetails() {
-    const [lightbox, setLightbox] = useState({ isOpen: false, src: '', alt: '' });
+    const imageUrls = [
+        "project3/normal/50/muestra1_de_100.png",
+        "project3/normal/50/muestra2_de_100.png",
+        "project3/normal/50/muestra3_de_100.png",
+        "project3/normal/50/Análisis Estadístico Global.png",
+        "project3/uniforme/50/muestra1_de_100.png",
+        "project3/uniforme/50/muestra2_de_100.png",
+        "project3/uniforme/50/muestra3_de_100.png",
+        "project3/uniforme/50/Análisis Estadístico Global.png",
+        "project3/expo/50/muestra1_de_100.png",
+        "project3/expo/50/muestra2_de_100.png",
+        "project3/expo/50/muestra3_de_100.png",
+        "project3/expo/50/Análisis Estadístico Global.png",
+    ];
 
-    function openLightbox(src, alt) {
-        setLightbox({ isOpen: true, src, alt });
-    }
-
-    function closeLightbox() {
-        setLightbox({ isOpen: false, src: '', alt: '' });
-    }
+    const imageTitles = [
+        "Normal Distribution (sample 1 of 100)", "Normal Distribution (sample 2 of 100)", "Normal Distribution (sample 3 of 100)", "Normal Distribution (union of all samples)", 
+        "Uniform Distribution (sample 1 of 100)", "Uniform Distribution (sample 2 of 100)", "Uniform Distribution (sample 3 of 100)", "Uniform Distribution (union of all samples)",
+        "Exponential Distribution (sample 1 of 100)", "Exponential Distribution (sample 2 of 100)", "Exponential Distribution (sample 3 of 100)", "Exponential Distribution (union of all samples)"
+    ];
+    
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
@@ -125,7 +137,6 @@ export default function ProjectDetails() {
                             </div>
                         </section>
 
-                        {/* 4x3 Image Grid */}
                         <motion.div
                             className="mt-12"
                             initial={{ opacity: 0, y: 20 }}
@@ -134,55 +145,26 @@ export default function ProjectDetails() {
                         >
                             <h2 className="text-3xl font-bold mb-6 text-center text-white">Simulation Visualizations</h2>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                                {Array.from({ length: 12 }).map((_, index) => (
+                                {imageUrls.map((url, index) => (
                                     <div key={index} className="relative group">
                                         <div className="bg-white/10 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:scale-105">
                                             <img
-                                                src={`project2/image${index + 1}.png`}
+                                                src={url}
                                                 alt={`Visualization ${index + 1}`}
                                                 className="w-full h-40 object-cover sm:h-48 md:h-56"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex items-center justify-center">
-                                                <button
-                                                    onClick={() =>
-                                                        openLightbox(`project2/image${index + 1}.png`, `Visualization ${index + 1}`)
-                                                    }
-                                                    className="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-lg hover:bg-blue-500"
-                                                >
-                                                    View Larger
-                                                </button>
                                             </div>
                                         </div>
+                                        {/* Título de cada imagen */}
                                         <h3 className="mt-4 text-lg font-semibold text-center text-white">
-                                            Visualization {index + 1}
+                                            {imageTitles[index]} {/* Aquí se usa el título correspondiente */}
                                         </h3>
                                     </div>
                                 ))}
                             </div>
                         </motion.div>
 
-                        {/* Lightbox Modal */}
-                        {lightbox.isOpen && (
-                            <div
-                                className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-                                onClick={closeLightbox}
-                            >
-                                <motion.div
-                                    initial={{ scale: 0.8, opacity: 0 }}
-                                    animate={{ scale: 1, opacity: 1 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="relative max-w-5xl w-full p-6"
-                                >
-                                    <img src={lightbox.src} alt={lightbox.alt} className="w-full h-auto rounded-lg shadow-xl" />
-                                    <button
-                                        onClick={closeLightbox}
-                                        className="absolute top-4 right-4 bg-red-600 text-white rounded-full p-3 shadow-md hover:bg-red-500 transition-transform transform hover:scale-110"
-                                    >
-                                        Close
-                                    </button>
-                                </motion.div>
-                            </div>
-                        )}
 
                         <section className="py-12">
                             <div className="container mx-auto px-4">
