@@ -138,9 +138,40 @@ export default function ProjectDetails() {
                                     Data Visualization
                                 </span>
                                 <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
-                                    Risk Management
+                                    Pandas
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    Matplotlib
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    Seaborn
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    gdown
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    Numpy
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    Google Cloud
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    Google Cloud BigQuery
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    Google OAuth2
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    Imbalanced-learn (imblearn)
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    TensorFlow
+                                </span>
+                                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                                    Keras
                                 </span>
                             </div>
+
                         </motion.div>
 
                         <motion.h2
