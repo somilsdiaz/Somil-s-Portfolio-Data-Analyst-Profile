@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         element: <Proj1 />,
     },
     {
-        path: "/project2",
+        path: "/loan-defaulter-prediction",
         element: <Proj2 />,
     },
     {

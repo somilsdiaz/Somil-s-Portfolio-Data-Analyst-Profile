@@ -19,13 +19,35 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: 'Customer Segmentation',
-      description: 'Segment customers to tailor marketing strategies.',
-      technologies: ['Python', 'Keras', 'Scikit-learn'],
-      icon: ['project1/x1.png', 'project1/x2.png'],
-      color: 'from-pink-500 to-rose-600',
-      link: '/project2'
+      title: 'Loan Defaulter Prediction',
+      description: "Conducted data analysis and developed a machine learning model to predict loan defaults using customer data, including income, credit amount, and family status, supporting financial institutions in risk management and credit allocation.",
+      technologies: [
+        "Python",
+        "Logistic Regression",
+        "SMOTE",
+        "Looker Studio",
+        "Data Visualization",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+        "gdown",
+        "Numpy",
+        "Google Cloud",
+        "Google Cloud BigQuery",
+        "Google OAuth2",
+        "Imbalanced-learn (imblearn)",
+        "TensorFlow",
+        "Keras"
+      ],
+      icon: ["project2/loan1.png", "project2/loan2.png"],
+      color: 'from-green-900 via-green-800 to-green-700',
+      titleColor: 'text-green-100',
+      descriptionColor: 'text-green-200',
+      buttonColor: "bg-green-500 text-white hover:bg-green-600 border-2 border-transparent hover:border-green-300 shadow-lg hover:shadow-xl rounded-lg transform hover:scale-105 transition-all",
+      link: '/loan-defaulter-prediction',
     },
+    
+    
     {
       id: 3,
       title: 'Sales Forecast',
