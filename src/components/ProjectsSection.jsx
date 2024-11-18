@@ -1,7 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Projects() {
+  const navigate = useNavigate(); 
+
+  const handleNavigation = (link) => {
+    navigate(link);  // Realiza la navegación
+    window.scrollTo(0, 0);  // Mueve el scroll al inicio de la página
+  };
+
   const projects = [
     {
       id: 1,
@@ -133,6 +142,7 @@ export default function Projects() {
             </div>
             <Link to={project.link}>
             <button
+              onClick={() => handleNavigation(project.link)}  
               className={`px-3 py-2 rounded text-sm font-medium ${project.buttonColor} shadow-md hover:shadow-lg transform hover:scale-105 transition`}
             >
               Learn More
