@@ -1,3 +1,6 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 export default function Projects() {
   const projects = [
     {
@@ -128,12 +131,13 @@ export default function Projects() {
                 </span>
               ))}
             </div>
+            <Link to={project.link}>
             <button
-              onClick={() => window.location.href = project.link}
               className={`px-3 py-2 rounded text-sm font-medium ${project.buttonColor} shadow-md hover:shadow-lg transform hover:scale-105 transition`}
             >
               Learn More
             </button>
+            </Link>
           </div>
         ))}
       </div>
