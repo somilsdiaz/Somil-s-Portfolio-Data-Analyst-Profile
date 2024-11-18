@@ -10,7 +10,7 @@ const HeroSection = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Data Insights <span className="text-cyan-400">Reimagined</span>
+        Somil Sandoval <span className="text-cyan-400">Diaz</span>
       </motion.h2>
       <motion.p 
         className="text-xl mb-8 max-w-2xl mx-auto"
@@ -18,7 +18,7 @@ const HeroSection = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Transforming raw data into powerful visualizations and actionable strategies for forward-thinking businesses.
+        I’m a Systems and Computer Engineering student passionate about data analysis, skilled in extracting insights and delivering data-driven solutions that drive strategic success.
       </motion.p>
       <motion.a 
         href="#projects" 

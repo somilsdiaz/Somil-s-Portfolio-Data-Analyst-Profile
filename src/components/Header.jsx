@@ -8,7 +8,7 @@ const Header = () => {
     <header className="fixed w-full z-10 bg-gray-900 bg-opacity-90 backdrop-filter backdrop-blur-sm">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">DataViz Pro</h1>
+          <h1 className="text-2xl font-bold">Somil's Portfolio</h1>
           <div className="md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
               {isMenuOpen ? <X /> : <Menu />}
