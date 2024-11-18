@@ -2,9 +2,32 @@ import React from 'react';
 
 function SkillsSection() {
   const skills = [
-    'Data Analysis', 'Machine Learning', 'Data Visualization', 
-    'Statistical Modeling', 'Python', 'R', 'SQL', 'Tableau'
+    'Python',
+    'SQL',
+    'Excel',
+    'Power BI',
+    'Google Cloud BigQuery',
+    'Data Analysis',
+    'KPIs',
+    'Machine Learning',
+    'Regression Models & Prediction Techniques',
+    'Descriptive and Inferential Statistics, and Probability',
+    'Statistical Sampling',
+    'Data Visualization',
+    'Looker Studio',
+    'Critical and Analytical Thinking',
+    'Attention to Detail',
+    'Effective Communication',
+    'Teamwork',
+    'Adaptability and Continuous Learning',
+    'Logistic Regression',
+    'Google Cloud',
+    'Google OAuth2',
+    'Big Data',
+    'Probability Distributions',
+    'Python multiprocessing'
   ];
+  
 
   return (
     <section id="skills" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
