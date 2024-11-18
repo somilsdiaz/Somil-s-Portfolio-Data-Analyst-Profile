@@ -6,8 +6,6 @@ import Proj2 from "../Pages/Proj2";
 import Proj3 from "../Pages/Proj3";
 import Proj4 from "../Pages/Proj4";
 
-
-
 const router = createBrowserRouter([
     {
         path: "/",
@@ -26,7 +24,7 @@ const router = createBrowserRouter([
         element: <Proj3 />,
     },
     {
-        path: "/project4",
+        path: "/traffic-accident-analysis",
         element: <Proj4 />,
     },
 ]);

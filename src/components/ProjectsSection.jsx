@@ -1,7 +1,3 @@
-import { useState } from 'react';
-import ProjectCard from './ProjectCard';
-import { TrendingUp, PieChart, LineChart, BarChart2 } from 'lucide-react';
-
 export default function Projects() {
   const projects = [
     {
@@ -73,12 +69,17 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: 'Product Performance',
-      description: 'Analyze the performance of different products.',
-      technologies: ['PowerBI', 'PostgreSQL', 'Tableau'],
-      icon: ['project1/x1.png', 'project1/x2.png'],
-      color: 'from-emerald-500 to-green-600',
-      link: '/project4'
+      title: 'Traffic Accident Analysis on Calle 30 in Barranquilla',
+      description: 'This project provides a detailed analysis of traffic accidents recorded on Calle 30 in Barranquilla, Colombia, using data from the [Open Data Portal of Colombia](https://www.datos.gov.co/). The objective is to identify annual trends, critical months, hourly patterns, and variations in accident severity',
+      technologies: ['Python', 'Pandas', 'Seaborn', 'Matplotlib'],
+      icon: ['project4/icon1.png', 'project4/icon2.png'],
+      color: 'from-gray-600 via-gray-500 to-gray-400', // Colores más suaves y neutros
+      titleColor: 'text-blue-100', 
+      descriptionColor: 'text-blue-200',
+      buttonColor: 
+      'bg-gray-900 text-white hover:bg-orange-600 border-2 border-transparent hover:border-orange-300 shadow-md hover:shadow-lg rounded-lg transform hover:scale-105 transition-all', 
+  
+      link: '/traffic-accident-analysis',
     },
   ];
 
